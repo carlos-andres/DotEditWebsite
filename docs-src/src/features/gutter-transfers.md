@@ -88,9 +88,9 @@ DB_HOST=localhost
 Multiline values (spanning multiple lines within quotes) are transferred as a single block. The entire value moves as one unit — you won't end up with partial transfers.
 
 ```
-PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
-MIIBogIBAAJBALRiMLAH...
------END RSA PRIVATE KEY-----"
+PRIVATE_KEY="lorem ipsum dolor sit amet
+consectetur adipiscing elit
+this is dummy text only"
 ```
 
 This entire block transfers as one action and counts as one undo step.
