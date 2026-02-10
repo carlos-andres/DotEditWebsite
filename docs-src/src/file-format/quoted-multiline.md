@@ -87,10 +87,9 @@ DotEdit reads subsequent lines until it finds the matching closing quote.
 ### Example
 
 ```
-PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
-MIIBogIBAAJBALRiMLAHudeSA/x3hB2f+2NRkJLA
-hN1gxVMq2g9+JCt0Gvcopq8hfFN0ZFg
------END RSA PRIVATE KEY-----"
+PRIVATE_KEY="lorem ipsum dolor sit amet
+consectetur adipiscing elit
+this is dummy text only"
 ```
 
 This is parsed as a single entry with key `PRIVATE_KEY`. The entire block — from the opening `"` on line 1 through the closing `"` on line 4 — is one multiline value.
