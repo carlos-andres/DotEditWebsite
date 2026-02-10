@@ -6,7 +6,6 @@ Marketing website and documentation for [DotEdit](https://github.com/carlos-andr
 
 - **Live site:** [dotedit.app](https://dotedit.app)
 - **Documentation:** [dotedit.app/docs](https://dotedit.app/docs)
-- **Presentation:** [slides.dotedit.app](https://slides.dotedit.app)
 
 ## Tech Stack
 
@@ -18,7 +17,6 @@ Marketing website and documentation for [DotEdit](https://github.com/carlos-andr
 | Docs | mdBook | 0.5.2 |
 | Fonts | Google Fonts CDN | Bricolage Grotesque, Inter, JetBrains Mono |
 | Output | Static HTML/CSS/JS | Zero runtime |
-| Deploy | SFTP → Siteground | `dist/` → `public_html/` |
 
 ## Requirements
 
@@ -53,16 +51,6 @@ npm run check
 ```
 
 The `dist/` folder contains the final static files ready for upload.
-
-## Deploy to Siteground
-
-```bash
-# Build everything
-npm run build:docs && npm run build
-
-# Upload dist/ contents to Siteground via File Manager or SFTP
-# Target: public_html/ (or your configured document root)
-```
 
 ## Main Features
 
@@ -135,24 +123,6 @@ DotEditWebsite/
 - **Zero client-side JS libraries** — only inline vanilla JS
 - **No forms, APIs, or user input** — static HTML only
 - **External resources:** Google Fonts CDN only
-- **Recommended server headers** (configure in `.htaccess` after deploy):
-  ```apache
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "DENY"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-  ```
-
-## Development Workflow
-
-This project was developed using a structured AI-assisted workflow system for Claude Code.
-
-- **Spec-driven:** Full requirements specification before implementation
-- **Phase-based:** Systematic build from scaffold to production-ready
-- **Constitution:** Auto-generated tech stack document via `/constitution` scan
-- **All phases complete** — Lighthouse 98/100/100/100
-
-Workflow system: [github.com/carlos-andres/workflow-system](https://github.com/carlos-andres/workflow-system)
 
 ## Related
 
